@@ -35,7 +35,7 @@ useEffect(()=>{onAuthStateChanged(auth,async(user)=>{
     
     <div>
     <ToastContainer theme='dark'/>
-      <Routes>
+      <Routes> 
         <Route path='/'element={<Home/>}/>
         <Route path='/login'element={<Login/>}/>
         <Route path='/player/:id' element={<Player/>}/>

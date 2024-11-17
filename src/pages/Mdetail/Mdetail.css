@@ -158,3 +158,81 @@
     align-items: center;
     justify-content: center;
 }
+.more-like-this {
+    margin-top: 2rem;
+}
+
+.similar-content {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.similar-item {
+    text-align: center;
+}
+
+.similar-item img {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.similar-item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.watchlist-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #6e6e6e;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    font-size: 150%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #6e6e6e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.watchlist-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.add-to-watchlist-button {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}

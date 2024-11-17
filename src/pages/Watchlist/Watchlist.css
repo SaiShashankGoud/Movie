@@ -1,20 +1,49 @@
+/* General Container for Page Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+}
 
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Slightly taller navbar */
+    /* Transparent background initially */
+    backdrop-filter: blur(0px); /* Optional: Add blur for a frosted effect */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+     /* Slight shadow for extended bottom */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
 
+/* Navbar Scrolled State */
+.navbar.scrolled {
+    background-color: #121212; /* Solid dark background when scrolled */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6); /* More prominent shadow */
+}
 
+/* Watchlist Section */
 .watchlist {
     padding: 20px;
     color: white;
     min-height: 100vh;
-    background-color: #121212; /* Dark background for better contrast */
-    margin-top: 70px;
+    background-color: #121212;
+    margin-top: 70px; /* Match the navbar height */
 }
 
 .watchlist h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.5rem; /* Larger font size for better visibility */
+    font-size: 2.5rem;
 }
 
+/* Category Buttons */
 .watchlist-categories {
     display: flex;
     justify-content: center;
@@ -22,25 +51,26 @@
 }
 
 .category-button {
-    background-color: #007bff; /* Blue background */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 0 5px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px; /* Slightly larger font size */
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .category-button.active {
-    background-color: #0056b3; /* Darker blue for active state */
+    background-color: #0056b3;
 }
 
 .category-button:hover {
-    background-color: #0056b3; /* Consistent hover effect */
+    background-color: #0056b3;
 }
 
+/* Movies Grid */
 .watchlist-movies {
     display: flex;
     flex-wrap: wrap;
@@ -66,64 +96,7 @@
     font-size: 16px;
 }
 
-.watchlist-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-button {
-    background-color: #f3ce13;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: black;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-button:hover {
-    background-color: #e0b92f;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f3ce13;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 10px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.watchlist-dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.add-to-watchlist-button {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
 .watchlist-movie:hover {
-    transform: scale(1.05); 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
 }

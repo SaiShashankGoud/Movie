@@ -26,8 +26,12 @@ const Watchlist = () => {
         : watchlist.filter(movie => movie.status === selectedCategory);
 
     return (
+        <div class="container">
+        <nav className="navbar">
+        <Navbar />
+  </nav>
         <div className="watchlist">
-          <Navbar />
+          
             <h1>Your Watchlist</h1>
             <div className="watchlist-categories">
                 <button className="category-button" onClick={() => handleCategoryChange('All Movies')}>All Movies</button>
@@ -52,6 +56,7 @@ const Watchlist = () => {
                     <p>No movies in this category.</p>
                 )}
             </div>
+        </div>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Mdetail.css";
 import { useParams, useLocation } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Movie = () => {
     const [currentDetail, setDetail] = useState(null);
@@ -89,6 +90,9 @@ const Movie = () => {
 
     return (
         <div className="movie">
+            <nav className="navbar">
+        <Navbar />
+  </nav>
             <div className="movie__intro">
                 <img
                     className="movie__backdrop"
