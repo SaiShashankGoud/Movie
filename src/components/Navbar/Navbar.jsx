@@ -43,7 +43,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className='navbar-right'>
-        <img src={search_icon} alt="Search Icon" className='icons' />
+        
         
         <img src={bell_icon} alt="Bell Icon" className='icons' />
         <div className='navbar-profile'>
